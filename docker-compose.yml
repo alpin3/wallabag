@@ -1,0 +1,15 @@
+db:
+  image: k0st/alpine-postgres
+#  volumes: 
+#  - /data/mydb:/var/lib/postgresql/data
+  environment:
+  - POSTGRES_DB=walla
+  - POSTGRES_USER=walla
+  - POSTGRES_PASSWORD=wallapass
+
+web:
+  image: test/wallabag
+  ports:
+   - "10080:80"
+  links:
+   - db
