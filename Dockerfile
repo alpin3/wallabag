@@ -1,7 +1,7 @@
 FROM alpin3/php-apache:3.4
 MAINTAINER kost - https://github.com/kost
 
-ENV WALLABAG_VERSION=2.0.8 \
+ENV WALLABAG_VERSION=2.1.1 \
     WALLABAG_SECRET=ovmpmAWXRCabNlMgzlzFXDYmCFfzGv \
     WALLABAG_SMTPHOST=127.0.0.1 \
     WALLABAG_SMTPUSER=null \
@@ -12,11 +12,13 @@ ENV WALLABAG_VERSION=2.0.8 \
 RUN apk --update --no-cache add wget ca-certificates \
       curl \
       git \
+      tar \
       libwebp \
       mariadb-client \
       postgresql-client \
       pcre \
       php5 \
+      php5-bcmath \
       php5-ctype \
       php5-curl \
       php5-dom \

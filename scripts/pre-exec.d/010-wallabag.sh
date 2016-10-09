@@ -115,6 +115,14 @@ parameters:
     twofactor_sender: $WALLABAG_SMTPFROM
     fosuser_confirmation: true
     from_email: $WALLABAG_SMTPFROM
+    fosuser_registration: true
+    rss_limit: 50
+    rabbitmq_host: localhost
+    rabbitmq_port: 5672
+    rabbitmq_user: guest
+    rabbitmq_password: guest
+    redis_host: localhost
+    redis_port: 6379
 EOF
 	FOUND_DB=1
 	wait4mysql
@@ -143,6 +151,14 @@ parameters:
     twofactor_sender: $WALLABAG_SMTPFROM
     fosuser_confirmation: true
     from_email: $WALLABAG_SMTPFROM
+    fosuser_registration: true
+    rss_limit: 50
+    rabbitmq_host: localhost
+    rabbitmq_port: 5672
+    rabbitmq_user: guest
+    rabbitmq_password: guest
+    redis_host: localhost
+    redis_port: 6379
 EOF
 	FOUND_DB=1
 	wait4psql
@@ -171,6 +187,14 @@ parameters:
     twofactor_sender: $WALLABAG_SMTPFROM
     fosuser_confirmation: true
     from_email: $WALLABAG_SMTPFROM
+    fosuser_registration: true
+    rss_limit: 50
+    rabbitmq_host: localhost
+    rabbitmq_port: 5672
+    rabbitmq_user: guest
+    rabbitmq_password: guest
+    redis_host: localhost
+    redis_port: 6379
 EOF
 fi
 
