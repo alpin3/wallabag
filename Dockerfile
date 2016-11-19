@@ -1,7 +1,7 @@
 FROM alpin3/php-apache:3.4
 MAINTAINER kost - https://github.com/kost
 
-ENV WALLABAG_VERSION=2.1.1 \
+ENV WALLABAG_VERSION=2.1.4 \
     WALLABAG_SECRET=ovmpmAWXRCabNlMgzlzFXDYmCFfzGv \
     WALLABAG_SMTPHOST=127.0.0.1 \
     WALLABAG_SMTPUSER=null \
@@ -9,7 +9,7 @@ ENV WALLABAG_VERSION=2.1.1 \
     WALLABAG_SMTPFROM=no-reply@example.org \
     SYMFONY_ENV=prod
 
-RUN apk --update --no-cache add wget ca-certificates \
+RUN apk upgrade --no-cache --update && apk --update --no-cache add wget ca-certificates \
       curl \
       git \
       tar \

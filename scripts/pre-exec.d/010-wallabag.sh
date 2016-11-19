@@ -105,6 +105,7 @@ parameters:
     database_password: $DB_ENV_MYSQL_PASSWORD
     database_path: ~
     database_table_prefix: wallabag_
+    database_socket: null
     mailer_transport: smtp
     mailer_host: $WALLABAG_SMTPHOST
     mailer_user: $WALLABAG_SMTPUSER
@@ -123,6 +124,8 @@ parameters:
     rabbitmq_password: guest
     redis_host: localhost
     redis_port: 6379
+    redis_scheme: tcp
+    redis_path: null
 EOF
 	FOUND_DB=1
 	wait4mysql
@@ -141,6 +144,7 @@ parameters:
     database_password: $DB_ENV_POSTGRES_PASSWORD
     database_path: ~
     database_table_prefix: wallabag_
+    database_socket: null
     mailer_transport: smtp
     mailer_host: $WALLABAG_SMTPHOST
     mailer_user: $WALLABAG_SMTPUSER
@@ -159,6 +163,8 @@ parameters:
     rabbitmq_password: guest
     redis_host: localhost
     redis_port: 6379
+    redis_scheme: tcp
+    redis_path: null
 EOF
 	FOUND_DB=1
 	wait4psql
@@ -177,6 +183,7 @@ parameters:
     database_password: ~
     database_path: '%kernel.root_dir%/../data/db/wallabag.sqlite'
     database_table_prefix: wallabag_
+    database_socket: null
     mailer_transport: smtp
     mailer_host: $WALLABAG_SMTPHOST
     mailer_user: $WALLABAG_SMTPUSER
@@ -195,6 +202,8 @@ parameters:
     rabbitmq_password: guest
     redis_host: localhost
     redis_port: 6379
+    redis_scheme: tcp
+    redis_path: null
 EOF
 fi
 
